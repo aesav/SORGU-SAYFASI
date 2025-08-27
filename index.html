@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Sinif Kura Sonuçlari</title>
+
+  <style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      background: #f7f7f7;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      height: 100vh;
+
+    }
+
+    .container {
+
+      background: white;
+
+      padding: 30px;
+
+      border-radius: 12px;
+
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+      text-align: center;
+
+      width: 350px;
+
+    }
+
+    input {
+
+      width: 100%;
+
+      padding: 10px;
+
+      margin: 10px 0;
+
+      border-radius: 6px;
+
+      border: 1px solid #ccc;
+
+      font-size: 16px;
+
+    }
+
+    button {
+
+      width: 100%;
+
+      padding: 10px;
+
+      background: #0073e6;
+
+      color: …
+[01:31, 27.08.2025] ahmeterdogansavastaer: <!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sınıf Kura Sonuçları</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005bb5;
+    }
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sınıf Kura Sonuçları</h2>
+    <input type="text" id="tc" placeholder="TC Kimlik Numaranızı Girin">
+    <button onclick="sorgula()">Sorgula</button>
+    <div class="result" id="sonuc"></div>
+  </div>
+
+  <script>
+    const data = {
+      "24181496612": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"31231289728": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"16475984240": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"15229793862": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"14947831344": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"13201874028": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"14335837330": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"27544383826": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"30703278314": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"17456512292": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"25879440290": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"34028130494": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"24031500544": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"38176044160": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"30061326382": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"30067300638": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"46619022088": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"20155629864": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"38239027048": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"19033696074": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"27934371938": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"18830956336": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"16309758122": { "sinif": "ANASINIFI A ŞUBESİ SABAH", "ogretmen": "AYŞEGÜL KOCAMAN" },
+"14949079980": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"25057439498": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"24265494084": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"19894639302": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"48799951226": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"22165563190": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"34051168020": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"32146230898": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"14578808708": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"20158629946": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"23683513124": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"25738463064": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"18892672182": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"24844474430": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"20752625122": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"27784389930": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"31306259458": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"38014025238": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"11161928188": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"15016801350": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"34597149248": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"18883672474": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"71260209052": { "sinif": "ANASINIFI B ŞUBESİ SABAH", "ogretmen": "ELİF BEYSİR" },
+"69049004608": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"18937671002": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"24157516078": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"71185211512": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"35458120604": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"30961298918": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"32386222592": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"23725511668": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"26746437986": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"48022981914": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"22939537280": { "sinif": "ANASINIFI C ŞUBESİ SABAH", "ogretmen": "MİHRİBAN ÇİL SAVRANOĞLU" },
+"18346690366": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"18469676636": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"34150164688": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"19975636084": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"35935103830": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"33454017782": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"49549932274": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"18838675062": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"15148797552": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"29788310064": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"22252297618": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"37264059994": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"38680026508": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"57304333716": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"23971502762": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"19162662766": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"29464332250": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"20482633558": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"21301605176": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"15655796048": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"37504042274": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"31081265590": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"15790804318": { "sinif": "ANASINIFI D ŞUBESİ ÖĞLE", "ogretmen": "AYŞE ÇERÇİ OĞUZ" },
+"26491418858": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"37960009330": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"33313164374": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"64564064656": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"25111462608": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"38533017516": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"37447051562": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"38854007432": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"19585649108": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"45056081986": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"33450187226": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"36217067642": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"75271069940": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"29437349056": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"36968073382": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"21871573554": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"20800609500": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"35272111888": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"32332224854": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"39262008684": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"34192162086": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"39425263554": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"21445587512": { "sinif": "ANASINIFI E ŞUBESİ ÖĞLE", "ogretmen": "ÖZGE POYRAZ" },
+"36754076862": { "sinif": "ANASINIFI F ŞUBESİ ÖĞLE", "ogretmen": "ASLI IŞIKÇELEBİ" },
+"22147592798": { "sinif": "ANASINIFI F ŞUBESİ ÖĞLE", "ogretmen": "ASLI IŞIKÇELEBİ" },
+"15940798788": { "sinif": "ANASINIFI F ŞUBESİ ÖĞLE", "ogretmen": "ASLI IŞIKÇELEBİ" },
+"20221627596": { "sinif": "ANASINIFI F ŞUBESİ ÖĞLE", "ogretmen": "ASLI IŞIKÇELEBİ" },
+"19435654344": { "sinif": "ANASINIFI F ŞUBESİ ÖĞLE", "ogretmen": "ASLI IŞIKÇELEBİ" },
+"26188429662": { "sinif": "ANASINIFI F ŞUBESİ ÖĞLE", "ogretmen": "ASLI IŞIKÇELEBİ" },
+"61375538390": { "sinif": "ANASINIFI F ŞUBESİ ÖĞLE", "ogretmen": "ASLI IŞIKÇELEBİ" },
+"25948450748": { "sinif": "ANASINIFI F ŞUBESİ ÖĞLE", "ogretmen": "ASLI IŞIKÇELEBİ" },
+"13717844904": { "sinif": "ANASINIFI F ŞUBESİ ÖĞLE", "ogretmen": "ASLI IŞIKÇELEBİ" },
+"31006269344": { "sinif": "ANASINIFI F ŞUBESİ ÖĞLE", "ogretmen": "ASLI IŞIKÇELEBİ" },
+};
+
+    function sorgula() {
+      const tc = document.getElementById("tc").value.trim();
+      const sonucDiv = document.getElementById("sonuc");
+
+      if (data[tc]) {
+        sonucDiv.textContent = "Sınıfınız: " + data[tc];
+        sonucDiv.style.color = "green";
+      } else {
+        sonucDiv.textContent = "Kayıt bulunamadı. TC Kimlik Numaranızı kontrol edin.";
+        sonucDiv.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
